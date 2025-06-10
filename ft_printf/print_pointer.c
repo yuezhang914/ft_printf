@@ -6,7 +6,7 @@
 /*   By: yzhang2 <yzhang2@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 23:23:23 by yzhang2           #+#    #+#             */
-/*   Updated: 2025/06/10 01:33:03 by yzhang2          ###   ########.fr       */
+/*   Updated: 2025/06/10 15:03:54 by yzhang2          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	print_pointer(void *ptr)
 	int				len;
 
 	if (!ptr)
-		return (write(1, "0x0", 3));
+		return (write(1, "(nil)", 5));
 	addr = (unsigned long)ptr;
 	hex = utoa_base(addr, 16, 0);
 	if (!hex)
