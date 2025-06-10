@@ -12,7 +12,7 @@ This project is part of the 42 school curriculum. The goal is to write a simplif
 The output must behave identically to the standard `printf` for the supported conversion specifiers.
 
 ---
-📖 How It Works
+How It Works
 
 The ft_printf() function iterates over the format string.
 
@@ -24,6 +24,12 @@ Each print_xxx() returns the number of characters printed.
 
 The total character count is returned at the end, just like standard printf().
 
+---
+Compile and run test:
+
+cc main.c libftprintf.a libft/libft.a -I. -Ilibft
+
+./a.out
 
 
 ## ✅ Supported Format Specifiers
