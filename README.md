@@ -25,7 +25,11 @@ Each print_xxx() returns the number of characters printed.
 The total character count is returned at the end, just like standard printf().
 
 ---
-Compile and run test:
+How to test:
+
+Copy main.c from test/ to ft_printf/, compile and run:
+
+make
 
 cc main.c libftprintf.a libft/libft.a -I. -Ilibft
 
