@@ -6,7 +6,7 @@
 #    By: yzhang2 <yzhang2@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/08 23:23:05 by yzhang2           #+#    #+#              #
-#    Updated: 2025/06/10 02:33:48 by yzhang2          ###   ########.fr        #
+#    Updated: 2025/06/10 17:34:48 by yzhang2          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,8 @@ OBJ = $(SRC:.c=.o)
 
 TMP_OBJ_DIR := .tmp_ftpf_objs
 
+all: $(NAME)
+
 $(LIBFT):
 	@$(MAKE) -C $(LIBFT_DIR)
 	
@@ -37,8 +39,6 @@ $(NAME): $(LIBFT) $(OBJ)
 	@cd $(TMP_OBJ_DIR) && $(AR) x libft.a 
 	@$(AR) $(ARFLAGS) $@ $(OBJ) $(TMP_OBJ_DIR)/*.o
 	@rm -rf $(TMP_OBJ_DIR)
-
-all: $(NAME)
 
 clean:
 	$(RM) $(OBJ) 
